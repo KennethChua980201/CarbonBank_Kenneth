@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CarbonBank</string>
+    <string name="text_username">Username</string>
+    <string name="text_password">Password</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="text_create_acc">Don\'t have an account? Create One</string>
+</resources>
