@@ -18,4 +18,9 @@
     <string name="text_company_reg_no">Company Registration Number</string>
     <string name="text_company_name">Company Name</string>
     <string name="text_company_pw">Company Password</string>
+
+    <string name="qrcode_message">Scanned to earn Carbon Credits</string>
+    <string name="title_activity_qrcode">qrcode</string>
+
+
 </resources>
