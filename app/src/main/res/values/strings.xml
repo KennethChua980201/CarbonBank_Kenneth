@@ -21,6 +21,9 @@
 
     <string name="qrcode_message">Scanned to earn Carbon Credits</string>
     <string name="title_activity_qrcode">qrcode</string>
+    <string name="title_activity_rewards">Rewards</string>
+    <string name="title_activity_carbon_trade">CarbonTrade</string>
+    <string name="title_activity_reward_details">RewardDetails</string>
 
 
 </resources>

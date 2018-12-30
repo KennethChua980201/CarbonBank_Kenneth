@@ -20,7 +20,7 @@ public class qrCode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_qrcode);
         String privatekey="M1001";
-        QRGEncoder qrgEncoder = new QRGEncoder(privatekey, null, QRGContents.Type.TEXT, 200);
+        QRGEncoder qrgEncoder = new QRGEncoder(privatekey, null, QRGContents.Type.TEXT, 350);
 
 
         try {
