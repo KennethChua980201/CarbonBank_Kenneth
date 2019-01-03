@@ -2,9 +2,6 @@ package com.cb.carbonbank;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
@@ -17,13 +14,13 @@ import android.widget.TextView;
 import java.util.List;
 
 
-public class rewardAdapter extends PagerAdapter {
+public class rewardTransportAdapter extends PagerAdapter {
    private List<rewardModel> rewardModelList;
    private LayoutInflater layoutInflater;
    private Context context;
 
 
-    public rewardAdapter(List<rewardModel> rewardModelList, Context context) {
+    public rewardTransportAdapter(List<rewardModel> rewardModelList, Context context) {
         this.rewardModelList = rewardModelList;
         this.context = context;
     }
@@ -47,9 +44,9 @@ public class rewardAdapter extends PagerAdapter {
         final ImageView rtImageView;
         final TextView rtTitle,rtDesc;
 
-        rtImageView=view.findViewById(R.id.rtImageView);
+        rtImageView=view.findViewById(R.id.rdImageView);
         rtTitle=view.findViewById(R.id.rtTitleTextView);
-        rtDesc=view.findViewById(R.id.rtDesc);
+        rtDesc=view.findViewById(R.id.rtDescTextView);
 
         rtImageView.setImageResource(rewardModelList.get(position).getImage());
         view.setOnClickListener(new View.OnClickListener(){
@@ -58,6 +55,14 @@ public class rewardAdapter extends PagerAdapter {
                 Bundle bundle = new Bundle();
                 bundle.putString("title", rtTitle.getText().toString());
                 bundle.putString("desc", rtDesc.getText().toString());
+
+                for(int i=0;i<rewardModelList.size();i++)
+                {
+                    if(rewardModelList.get(i).getTitle().equals(rtTitle.getText().toString()))
+                    {
+                        bundle.putString("type", rewardModelList.get(i).getType());
+                    }
+                }
                 Intent intent = new Intent(context, RewardDetails.class);
                 intent.putExtras(bundle);
                 context.startActivity(intent);

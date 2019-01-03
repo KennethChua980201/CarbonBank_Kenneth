@@ -17,7 +17,7 @@
             android:layout_height="300dp">
 
             <ImageView
-                android:id="@+id/rtImageView"
+                android:id="@+id/rdImageView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_alignParentTop="true"
@@ -27,28 +27,28 @@
 
             <TextView
                 android:id="@+id/rtTitleTextView"
-                android:textColor="#262626"
-                android:layout_below="@+id/rtImageView"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="16dp"
-                android:text="Title"
-                android:textSize="15dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rdImageView"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Title"
+                android:textColor="#262626"
+                android:textSize="15dp" />
 
             <TextView
-                android:id="@+id/rtDesc"
+                android:id="@+id/rtDescTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/rtTitleTextView"
-                android:layout_marginTop="3dp"
-                android:maxLines="3"
-                android:drawablePadding="10dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="3dp"
                 android:layout_marginRight="16dp"
+                android:drawablePadding="10dp"
+                android:maxLines="3"
                 android:text="Desc"
                 android:textColor="#262626"
-                android:textSize="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:textSize="10dp" />
 
         </RelativeLayout>
 

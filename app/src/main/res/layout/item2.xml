@@ -26,21 +26,21 @@
                 android:src="@drawable/rewardtransport1" />
 
             <TextView
-                android:id="@+id/rtTitleTextView"
-                android:textColor="#262626"
-                android:layout_below="@+id/rfImageView"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="16dp"
-                android:text="Title"
-                android:textSize="15dp"
+                android:id="@id/rfTitle"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rfImageView"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Title"
+                android:textColor="#262626"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/rfDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/rtTitleTextView"
+                android:layout_below="@+id/rfTitle"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="3dp"
                 android:layout_marginRight="16dp"

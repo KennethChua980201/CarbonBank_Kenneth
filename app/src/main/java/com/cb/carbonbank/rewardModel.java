@@ -4,8 +4,25 @@ public class rewardModel {
     private int image;
     private String title;
     private String desc;
+    private String type;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public rewardModel(int image, String title, String desc, String type) {
+        this.image = image;
+        this.title = title;
+        this.desc = desc;
+        this.type = type;
+    }
 
     public rewardModel() {
+
     }
 
     public int getImage() {
@@ -30,12 +47,5 @@ public class rewardModel {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-    public rewardModel(int image, String title, String desc) {
-        this.image = image;
-        this.title = title;
-        this.desc = desc;
-
     }
 }

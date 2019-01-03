@@ -43,7 +43,7 @@ public class rewardFoodAdapter extends PagerAdapter {
         ImageView rfImageView;
         final TextView rfTitle,rfDesc;
         rfImageView=view.findViewById(R.id.rfImageView);
-        rfTitle=view.findViewById(R.id.rtTitleTextView);
+        rfTitle=view.findViewById(R.id.rfTitle);
         rfDesc=view.findViewById(R.id.rfDesc);
 
         rfImageView.setImageResource(rewardModelList.get(position).getImage());
@@ -57,6 +57,13 @@ public class rewardFoodAdapter extends PagerAdapter {
                 bundle.putString("title", rfTitle.getText().toString());
                 bundle.putString("desc", rfDesc.getText().toString());
                 Intent intent = new Intent(context, RewardDetails.class);
+                for(int i=0;i<rewardModelList.size();i++)
+                {
+                    if(rewardModelList.get(i).getTitle().equals(rfTitle.getText().toString()))
+                    {
+                        bundle.putString("type", rewardModelList.get(i).getType());
+                    }
+                }
                 intent.putExtras(bundle);
                 context.startActivity(intent);
             }
